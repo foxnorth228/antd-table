@@ -7,7 +7,7 @@ export interface IRowData {
   value: number;
 }
 
-export interface IContentData {
+export interface IContentTable {
   content: IRowData[];
 }
 
@@ -17,12 +17,7 @@ export interface IContentFilter {
 
 export type IContentModalForm = Omit<IRowData, 'id'>;
 
-export interface IContentPageContext {
-  handleAdd: () => void;
-  handleEdit: (record: IRowData) => void;
-}
-
-export interface IContentColumnData {
+export interface IContentTableColumnData {
   title: string;
   dataIndex: string;
   key?: number | string;

@@ -1,8 +1,8 @@
-import { IContentColumnData, IRowData } from '@entities/content/model/types';
+import { IContentTableColumnData, IRowData } from '@entities/content/model/types';
 
 export const actionsDataIndex = 'actions';
 
-export const columns: IContentColumnData[] = [
+export const columns: IContentTableColumnData[] = [
   {
     key: 'name',
     title: 'Имя',

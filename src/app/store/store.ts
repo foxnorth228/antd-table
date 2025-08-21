@@ -1,11 +1,13 @@
-import contentFilterSlice from '@entities/content/model/content-filter-slice';
-import contentSlice from '@entities/content/model/content-table-slice';
+import contentFilterSlice, {
+  contentFilterReducerName,
+} from '@entities/content/model/content-filter-slice';
+import contentSlice, { contentTableReducerName } from '@entities/content/model/content-table-slice';
 import { configureStore } from '@reduxjs/toolkit';
 
 export const store = configureStore({
   reducer: {
-    content: contentSlice,
-    contentFilter: contentFilterSlice,
+    [contentTableReducerName]: contentSlice,
+    [contentFilterReducerName]: contentFilterSlice,
   },
 });
 

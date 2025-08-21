@@ -1,69 +1,26 @@
-# React + TypeScript + Vite
+# Antd Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Общие моменты
 
-Currently, two official plugins are available:
+- проект создан с помощью Vite, с FSD-архитектурой
+- В проект добавлены и настроены typescript, eslint, prettier, husky
+- Для хранения данных выбран Redux Toolkit
+- Стек: React, Typescript, Redux Toolkit, Antd, Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Запуск проекта
 
-## Expanding the ESLint configuration
+Локальный запуск  
+`npm run dev`  
+Имеется ссылка на [github pages](https://foxnorth228.github.io/antd-table/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Задание
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+- [x] Разработать компонент таблицы, с несколькими столбцами. Столбцы должны включать в себя имя, дату, числовое значение, а так же колонку с действиями.
+- [x] Над таблицей должна быть кнопка "Добавить", вызывающая модальное окно с набором полей соответствующих столбцам в таблице.
+- [x] После заполнения и валидации данных полей в таблицу должна добавляться строка с ними.
+- [x] В ячейке колонки "Действия" должны быть кнопки "удалить" и "редактировать" (можете обозначать их иконками).
+- [x] Нажатие на кнопку "редактировать" вновь вызывает модальное окно, заполненное данными из строки и при изменении и подтверждении в модальном окне меняет данные в соответствующей строке.
+- [x] Нажатие на кнопку "удалить" - убирает данную строку из таблицы.
+- [x] Использовать библиотеку AntD, реализовать с её помощью сортировку по всем колонкам, которая будет правильно работать в зависимости от типа значения в колонке
+- [x] Реализовать поиск по всем ячейкам таблицы. Инпут для поиска расположить над таблицей.
+- [x] Обязательно оформляем публикацию рабочей страницы на github pages

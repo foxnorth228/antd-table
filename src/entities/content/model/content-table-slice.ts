@@ -1,10 +1,10 @@
 import { RootState } from '@app/store/store';
-import { IContentData, IRowData } from '@entities/content/model/types';
+import { IContentTable, IRowData } from '@entities/content/model/types';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 
-const initialState: IContentData = {
+const initialState: IContentTable = {
   content: [],
 };
 
@@ -32,6 +32,7 @@ export const contentTableSlice = createSlice({
 
 const { addRow, editRow, deleteRow } = contentTableSlice.actions;
 
+export const contentTableReducerName = 'content';
 export default contentTableSlice.reducer;
 
 export const useContentData = () => {

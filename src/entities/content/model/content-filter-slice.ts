@@ -19,6 +19,7 @@ export const contentFilterSlice = createSlice({
 
 export const { changeValue } = contentFilterSlice.actions;
 
+export const contentFilterReducerName = 'contentFilter';
 export default contentFilterSlice.reducer;
 
 export const useContentFilter = () => {
